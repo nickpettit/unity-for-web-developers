@@ -18,12 +18,12 @@ public class FollowTarget : MonoBehaviour
         // Point the target direction vector toward the target
         Vector3 m_targetDirection = m_target.position - transform.position;
 
-        // If the sphere is close, set the retarget speed to be high.
-        // Otherwise, use the typical retargeting speed.
+        // If the sphere is close, set the retarget speed to be high
+        // Otherwise, use the typical retargeting speed
         float retargetSpeed = Vector3.SqrMagnitude(m_targetDirection) < 0.1f ? 1000f : m_retargetingSpeed;
 
         // Linearly interpolate the movement vector from the current direction to the target direction
-        // where T is fixed delta time multiplied by the retargeting speed.
+        // where T is fixed delta time multiplied by the retargeting speed
         m_rollingMovement.m_movementDirection = Vector3.Lerp(m_rollingMovement.m_movementDirection,
                                                              m_targetDirection.normalized,
                                                              Time.fixedDeltaTime * retargetSpeed);

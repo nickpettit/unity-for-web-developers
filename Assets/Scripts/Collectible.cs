@@ -12,10 +12,10 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        // If the other GameObject has a Score component, increment it.
+        // If the other GameObject has a Score component, increment it
         other.gameObject.GetComponent<Score>().IncrementScore();
 
-        // Move the position to a new random position within the board bounds.
+        // Move the position to a new random position within the board bounds
         transform.position = new Vector3(Random.Range(-range, range), transform.position.y, Random.Range(-range, range));
     }
 

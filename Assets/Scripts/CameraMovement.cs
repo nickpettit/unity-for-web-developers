@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        // Set the movement target to the target's position plus an X and Z offset.
+        // Set the movement target to the target's position plus an X and Z offset
         Vector3 target = new Vector3(m_target.position.x + m_offset.x,
                                      transform.position.y,
                                      m_target.position.z + m_offset.z);
