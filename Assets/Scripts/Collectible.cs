@@ -16,7 +16,9 @@ public class Collectible : MonoBehaviour
         other.gameObject.GetComponent<Score>().IncrementScore();
 
         // Move the position to a new random position within the board bounds
-        transform.position = new Vector3(Random.Range(-range, range), transform.position.y, Random.Range(-range, range));
+        transform.position = new Vector3(Random.Range(-range, range),
+                                         transform.position.y,
+                                         Random.Range(-range, range));
     }
 
     public void ResetPosition()

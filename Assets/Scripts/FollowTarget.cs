@@ -22,7 +22,7 @@ public class FollowTarget : MonoBehaviour
         // Otherwise, use the typical retargeting speed
         float retargetSpeed = Vector3.SqrMagnitude(m_targetDirection) < 0.1f ? 1000f : m_retargetingSpeed;
 
-        // Linearly interpolate the movement vector from the current direction to the target direction
+        // Linearly interpolate the movement vector from the current direction to the target
         // where T is fixed delta time multiplied by the retargeting speed
         m_rollingMovement.m_movementDirection = Vector3.Lerp(m_rollingMovement.m_movementDirection,
                                                              m_targetDirection.normalized,

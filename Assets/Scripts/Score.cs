@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Every fixed update, update the score string.
+        // Every fixed update, update the score string
         m_scoreText.text = ScoreValue.ToString();
     }
 

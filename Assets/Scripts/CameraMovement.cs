@@ -20,6 +20,8 @@ public class CameraMovement : MonoBehaviour
                                      m_target.position.z + m_offset.z);
 
         // Linearly interpolate the position from the current position to the target
-        transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position,
+                                          target,
+                                          Time.deltaTime);
     }
 }
