@@ -48,7 +48,9 @@ public class GameManager : MonoBehaviour
         // first number (0 and 1) is the index
         // : separates the index and the formatting
         // the 0 are leading zeros
-        m_timerText.text = string.Format("{0:0}:{1:00}", Mathf.Floor(m_timer / 60), Mathf.Floor(m_timer % 60));
+        m_timerText.text = string.Format("{0:0}:{1:00}",
+                                         Mathf.Floor(m_timer / 60),
+                                         Mathf.Floor(m_timer % 60));
     }
 
     void GameOver()
