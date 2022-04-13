@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class RollingMovement : MonoBehaviour
 {
-    [SerializeField] float m_speed = 15f;
     Rigidbody m_rigidbody;
     [HideInInspector] public Vector3 m_movementDirection;
     Vector3 m_startPosition;
@@ -17,7 +16,7 @@ public class RollingMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Every physics tick, add a force equal to the movement vector multiplied by speed
-        m_rigidbody.AddForce(m_movementDirection * m_speed);
+        m_rigidbody.AddForce(m_movementDirection);
 
         // If the Y position of the sphere is below the respawn height, reset its position
         if (transform.position.y <= GameManager.RespawnHeight)
